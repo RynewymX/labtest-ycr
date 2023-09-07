@@ -9,6 +9,8 @@ def dessert_choice():
       print("Kulfi - Input 3")
       print("Bread Pudding - Input 4")
       print("Beignets - Input 5")
+      print("Dirty Sewer Water - Input 6")
+      print("Dragon Eyeballs - Input 7")
       print("-----------------------------------")
       dessert_name = input("What dessert would you like? ")
       if dessert_name.lower()=="1":
@@ -21,8 +23,14 @@ def dessert_choice():
           print("Excellent choice. I will grab you some Bread Pudding right away.")
       elif dessert_name.lower()=="5":
           print("Excellent choice. I will grab you some Beignets right away.")
+      elif dessert_name.lower()=="6":
+          print("Uhhh... We don't have that on the menu. Try something else?")
+          dessert_name_choice()
+      elif dessert_name.lower()=="7":
+          print("Are you trying to be funny? We don't have those, try something else.")
+          dessert_name_choice()
       else:
-        print("Please input a number from 1-5.")
+        print("Please input a number from 1-7.")
         dessert_name_choice()
     dessert_name_choice()
   elif choice.lower()=="no":
