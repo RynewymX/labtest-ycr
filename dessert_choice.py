@@ -1,3 +1,5 @@
+badChoiceCounter = 0
+
 def dessert_choice():
   choice = input("Would you like dessert? ")
   if choice.lower()=="yes":
@@ -25,9 +27,14 @@ def dessert_choice():
           print("Excellent choice. I will grab you some Beignets right away.")
       elif dessert_name.lower()=="6":
           print("Uhhh... We don't have that on the menu. Try something else?")
+          badChoiceCounter + 1
+          if badChoiceCounter >= 3:
+            print("GET OUT OF MY RESTURANT")
           dessert_name_choice()
       elif dessert_name.lower()=="7":
           print("Are you trying to be funny? We don't have those, try something else.")
+          if badChoiceCounter >= 3:
+            print("GET OUT OF MY RESTURANT")
           dessert_name_choice()
       else:
         print("Please input a number from 1-7.")
